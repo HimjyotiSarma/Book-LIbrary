@@ -1,0 +1,261 @@
+/* CSS Boiler Plate */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    /* font-size: 62.5%;  */
+    
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #dce2f2;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+    html {
+          scroll-behavior: smooth;
+    }
+}
+
+
+/* Project CSS */
+main{
+    padding-bottom: 120px;
+}
+
+header{
+    padding: 20px 50px;
+    background-color: #DCF2F1;
+}
+.head__section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.logo__section{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    place-items: center;
+}
+.logo__section img{
+    width: 50%;
+    max-width: 120px;
+}
+.logo__section h1{
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+.login__btn{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    padding:1rem 1.5rem;
+    border-radius: 10px;
+    background-color: #201bb0;
+    color: white;
+    cursor: pointer;
+}
+.login__btn:hover{
+    background-color: #201bb0;
+}
+.add_book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem auto;
+}
+/* .add_book_btn{
+    width: 25%;
+    max-width: 150px;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+}
+.add_book_btn:hover{
+    bord
+} */
+.add_book_btn {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 25%;
+    max-width: 200px;
+    
+  }
+  
+  .add_book_btn:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+  .close_image_svg{
+    height: 20px;
+    width: 20px;
+  }
+  
+ .book_form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+ }
+ .error_element{
+    color: rgb(221, 53, 53);
+    font-size: 1em;
+ }
+ .hidden{
+    display: none;
+ }
+ .show{
+    display: block;
+ }
+ .books_library_section{
+    margin: 50px auto;
+    padding: 30px;
+    /* background-color: rgba(50, 115, 220, 0.3); */
+
+ }
+ .books_library{
+    display: grid;
+    gap: 50px;
+    width: 90vw;
+    max-width: 1280px;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    margin: auto;
+ }
+ .book_card{
+    box-shadow: 17px 20px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    height: 18rem;
+    /* min-width: 15rem;  */
+    background-color: #a0dbc9;
+    padding: 2rem;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-items: start;
+    align-items: center; */
+    text-align: center;
+ }
+ .book_card h1{
+    text-transform: uppercase;
+ }
+ .card_btn{
+    width: 100%;
+    height: max-content;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: large;
+    font-weight: 600;
+    box-shadow: 12px 12px 7px -3px rgba(0,0,0,0.1);
+    text-transform: capitalize;
+ }
+ .card_btn:active{
+    box-shadow: 0px 0px 0px 0px;
+ }
+ .read_btn{
+    background-color: #809fff;
+ }
+ .remove_btn{
+    background-color: #b33636;
+ }
+
+
+
+/* Footer CSS */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-top: 100px;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    /* overflow: hidden; */
+    background-color: rgb(192, 190, 190);
+}
+.footer p{
+    display: flex;
+    align-items: center;
+}
+.footer p a{
+    margin-left: 0.25rem;
+}
+.footer p a svg{
+    height: fit-content;
+}
+
+
+/* media Query Section */
+
+@media only screen and ( max-width: 640px ){
+    .head__section{
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo__section{
+
+    }
+    .logo__section img{
+        width: 25%;
+    }
+    .logo__section h1{
+        font-size: 1.5rem;
+    }
+    .login__btn{
+        font-size: 1.25rem;
+    }
+    .add_book_btn {
+        padding: 0.75em 1.25em;
+      }
+    .books_library_section{
+        margin: 20px auto;
+    }
+    .books_library{
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+        grid-gap: 20px 0px;
+    }
+    .book_card{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+@media only screen and (min-width: 640px) and (max-width: 1280px) {
+    .login__btn{
+        font-size: 1.5rem;
+    }
+    /* .books_library{
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-gap: 20px 0px;
+    } */
+}

@@ -1,0 +1,32 @@
+const myLibrary=[];
+
+function Book(title,author,pages,isRead){
+    this.title=title;
+    this.author=author;
+    this.pages=pages;
+    this.isRead= isRead;
+}
+
+const newBook= new Book('the Hobbit', 'J.R.R Tolkein', '580', true)
+console.log(newBook.__proto__)
+const secondBook= new Book('The Great Gatsby','F. Scott Fitzgerald', '700', false)
+myLibrary.push(newBook)
+myLibrary.push(secondBook)
+// console.log(myLibrary)
+
+const newLibrary=myLibrary.map((book)=>{
+    console.log(book)
+    // return book.title
+})
+
+
+
+
+
+<div class="book_card">
+                    <h1>The Hobbit</h1>
+                    <h3>J. R. R. Tolkien</h3>
+                    <h4>544</h4>
+                    <button class="card_btn read_btn">Read</button>
+                    <button class="card_btn remove_btn">Remove</button>
+                </div>
